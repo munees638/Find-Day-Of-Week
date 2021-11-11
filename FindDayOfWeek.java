@@ -15,7 +15,7 @@ public class FindDayOfWeek
 	    String ans = findDayOfWeek(date);
 	    
 	    System.out.println(ans);
-
+	    
 	}
 
     static String findDayOfWeek(String date){
@@ -59,17 +59,17 @@ public class FindDayOfWeek
         
         int ans = 0;
         
+        if(isLeap(year)){
+            
+            arr[1] = 1;
+        }        
+        
         for(int i=0;i<arr.length;i++){
             
             if((i + 1) < month){
                 
                 ans += arr[i];
             }
-        }
-        
-        if(isLeap(year)){
-            
-            ans += 1;
         }
         
         return ans % 7;
